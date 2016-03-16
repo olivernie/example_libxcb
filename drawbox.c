@@ -1,7 +1,7 @@
-/* Simple XCB application drawing a box in a window */
-/* to compile it use :
- cc x.c -lxcb
-*/
+/* 
+ * Simple XCB application drawing a box in a window
+ * From https://en.wikipedia.org/wiki/XCB
+ */
 #include <xcb/xcb.h>
 #include <stdio.h>
 #include <stdlib.h>
