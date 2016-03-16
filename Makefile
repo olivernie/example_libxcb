@@ -1,4 +1,6 @@
 
+TARGET = test
+
 SRCS =
 SRCS += drawbox.c
 
@@ -26,16 +28,16 @@ STRIP   = strip
 
 DEPEND_DIR = depend
 
-CLEAN_FILES += $(OBJS) .depend $(DEPEND_DIR)/*.d
+CLEAN_FILES += $(TARGET) $(OBJS) .depend $(DEPEND_DIR)/*.d
 
 # command macro to generate dependency file
 MAKEDEPEND = echo "make dependency: " $< ; \
     [ -d $(DEPEND_DIR) ] || mkdir $(DEPEND_DIR); \
     $(CXX) -M $(CPPFLAGS) $(CXXFLAGS) $< > $(DEPEND_DIR)/$*.d ;
 
-all: test
+all: $(TARGET)
 
-test: $(OBJS)
+$(TARGET): $(OBJS)
 	$(CC) $(LDFLAGS) -o $@ $(OBJS) $(LDADD)
 
 %.o : %.c
