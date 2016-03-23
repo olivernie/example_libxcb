@@ -1,3 +1,5 @@
+# install g++ and libxcb1-dev
+# sudo apt-get install g++ libxcb1-dev -y
 
 TARGET = test
 
