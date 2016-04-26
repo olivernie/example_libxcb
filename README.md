@@ -5,5 +5,5 @@ How to build:
   make
 
 How to run:
-  run ./test, you will create a new window witch a black square on left top of your screen.
+  run ./test, you will create a new window with a black square on left top of your screen.
 
